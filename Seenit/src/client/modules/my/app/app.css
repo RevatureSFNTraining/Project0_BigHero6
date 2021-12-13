@@ -1,4 +1,4 @@
-.center {
+/* .center {
     text-align: center;
 }
 .link {
@@ -35,4 +35,18 @@ img {
 
 .greeting {
     height: 75px;
+} */
+
+.row {
+    display: flex;
+  }
+  
+.feed {
+    flex: 70%;
+    flex-flow: column;
+    align-items: end;
+  }
+
+.sidebar {
+    flex: 25%;
 }
