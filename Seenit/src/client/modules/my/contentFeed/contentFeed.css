@@ -5,3 +5,8 @@
     text-align: right;
     padding: 5%;
 }
+
+.icon {
+    max-width: 44px;
+    height: auto;
+  }

@@ -3,3 +3,7 @@
     flex-flow: column;
     padding: 5vh 5vw;
 }
+
+:host {
+    font-size: x-small;
+}
