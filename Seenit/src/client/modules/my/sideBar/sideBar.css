@@ -1,9 +1,11 @@
 .sidebar {
     display:flex;
     flex-flow: column;
-    padding: 5vh 5vw;
+    margin: 1vh 1vw;
+	background-color: #acdcee; 
 }
 
 :host {
     font-size: x-small;
+    
 }

@@ -1,0 +1,23 @@
+.icon {
+    max-width: 33px;
+    height: auto;
+}
+
+.logobox {
+    display: flex;
+    align-items: center;
+    background-color: #2e94b9; 
+    width: 120px;
+    justify-content: space-around;
+}
+
+
+
+a {
+    color: #475053;
+    text-decoration: none;
+    background-color: #2e94b9; 
+    font-size: larger;
+    justify-content: center;
+    font-family: Blippo, Arial, sans-serif;
+}

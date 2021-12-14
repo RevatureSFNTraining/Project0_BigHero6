@@ -1,0 +1,9 @@
+.icon {
+    max-width: 33px;
+    height:auto;
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    border-style: none;
+    background-color: #acdcee;
+}

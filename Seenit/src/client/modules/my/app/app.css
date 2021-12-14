@@ -52,3 +52,17 @@
 .sidebar {
     flex: 25%;
 }
+
+
+	
+.second-color { 
+	background: #475053; 
+}
+
+:host { 
+	background: #acdcee; 
+}
+
+.fourth-color { 
+	background: #f0fbff; 
+}

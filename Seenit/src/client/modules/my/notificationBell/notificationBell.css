@@ -1,0 +1,14 @@
+.icon {
+    max-width: 44px;
+    height:auto;
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    border-style: none;
+    background-color: #acdcee;
+}
+
+img {
+    max-width: 33px;
+    height: 33px;
+}

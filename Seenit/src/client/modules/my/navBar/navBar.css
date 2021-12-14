@@ -1,4 +1,10 @@
 .bar {
     display:flex;
     justify-content: space-between;
+    align-items: center;
+	background-color: #acdcee; 
+    font-family:  Helvetica, Arial, sans-serif;
+}
+.item {
+    margin: 6px;
 }
