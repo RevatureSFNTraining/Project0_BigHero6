@@ -1,4 +1,10 @@
 import { LightningElement } from 'lwc';
+/**   Posts:    key: ordered ints
+                score: between 0 and 10k
+                author: 'trevor',
+                publishDateTime: 2020 some date
+                title: 'title + i'
+                preview: this.lorem.slice(ls, rs) */
 
 export default class ContentFeed extends LightningElement {
     lorem = `Lorem ipsum dolor sit amet, consectetur adipiscing elit. In hendrerit tortor nec nunc pulvinar efficitur. Phasellus condimentum lobortis lobortis. Vestibulum mattis lectus eros, interdum lobortis purus sagittis vitae. Suspendisse ut sapien non elit ultrices ornare. Sed ut tempor dui, sed euismod dolor. Nam a felis quis nunc dapibus iaculis vel sed erat. Donec fringilla sagittis lorem, quis rutrum mi fringilla et.
@@ -16,11 +22,12 @@ export default class ContentFeed extends LightningElement {
         let date = new Date(+start + Math.random() * (end - start));
         let hour = startHour + Math.random() * (endHour - startHour) | 0;
         date.setHours(hour);
-        date.setFullYear(2021);
+        date.setFullYear(2020);
         return date;
       } 
       // written Jul 13 '15 at 8:51 by Peter Olson, accessed at https://stackoverflow.com/questions/31378526/generate-random-date-between-two-dates-and-times-in-javascript
     buildPosts() {
+        let j = this.posts.length;
         for (let i = 0; i < 16; i++) {
             // console.log(i);
             let ls = i + Math.round((Math.random()*this.l));
@@ -36,7 +43,7 @@ export default class ContentFeed extends LightningElement {
             // console.log('rs = ' + rs.toString());
             
             this.posts.push({
-                key: i,
+                key: j+i,
                 score: Math.round(Math.random()*10000),
                 author: 'trevor',
                 publishDateTime: this.randomDate(ls, rs, ls, rs),
