@@ -5,7 +5,12 @@
     justify-items: center;
     align-items: center;
     border-style: none;
-    background-color: #acdcee;
+    
     padding: 1%;
     flex-direction: column;
+}
+
+.arrow {
+    position: relative;
+    left: 2px;
 }

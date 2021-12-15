@@ -3,9 +3,19 @@
     flex-flow: column;
     margin: 1vh 1vw;
 	background-color: #acdcee; 
+    text-align: center;
+    color: #475053;
+    font-size: x-small;
+    position: relative;
+    top: -1vh;
 }
 
-:host {
-    font-size: x-small;
-    
+
+a {
+    color: #475053;
+    text-decoration: none;
+}
+
+div,span {
+    border-radius: 8px;
 }

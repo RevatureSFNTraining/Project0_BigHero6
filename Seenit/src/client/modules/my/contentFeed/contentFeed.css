@@ -19,5 +19,9 @@
     padding: 2%;
 }
 
+div,span {
+    border-radius: 8px;
+}
+
 /* :host {
 } */

@@ -51,6 +51,8 @@
 
 .sidebar {
     flex: 25%;
+    flex-flow: column;
+    align-items: end;
 }
 
 
@@ -66,3 +68,4 @@
 .fourth-color { 
 	background: #f0fbff; 
 }
+

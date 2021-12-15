@@ -21,3 +21,7 @@ a {
     justify-content: center;
     font-family: Blippo, Arial, sans-serif;
 }
+
+div,span {
+    border-radius:6px;
+}

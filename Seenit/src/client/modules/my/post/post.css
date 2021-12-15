@@ -1,0 +1,17 @@
+.thepost {
+    background: #f0fbff;
+    display: flex;
+    flex-flow: row;
+    padding: 1%;
+    justify-content: left;
+    text-align: left;
+}
+
+.stuff {
+    position: relative;
+    left: 22px;
+}
+
+div,span {
+    border-radius: 6px;
+}
