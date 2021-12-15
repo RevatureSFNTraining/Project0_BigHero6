@@ -1,0 +1,22 @@
+<template>
+    <div class="follow_list"><span>Followed Channels</span></div>
+    <div class="follow_card">
+        <card>
+        <ul class="slds-m-around_medium">
+            <template for:each={users} for:item="user">
+                <li key={user.id} class="slds-card slds-has-top-magnet slds-grid">
+                    <img src={user.profile} class="pfp_img slds-avatar_circle">
+                    <div class="slds-grid slds-grid_vertical"> 
+                        <div class="slds-col">
+                            <span class="user_name">{user.username}</span>
+                            <div class="game_title"> {user.gametitle}</div>
+                        </div>
+                    </div>
+                    <div class="view_count slds-col"> <span>{user.viewcnt}</span></div>
+                </li>
+                
+            </template>
+        </ul>
+        </card>
+    </div>
+</template>

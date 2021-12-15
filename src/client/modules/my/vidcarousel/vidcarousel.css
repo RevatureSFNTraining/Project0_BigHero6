@@ -1,0 +1,27 @@
+.active {
+    display: block;
+}
+.hidden {
+    display: none;
+}
+.title {
+    font-size: 1rem;
+}
+footer {
+    align-self: center;
+    margin-top: 1.25rem;
+    margin-right: 18%;
+}
+.count {
+    margin: auto .5rem;
+}
+
+.slds-carousel{
+    margin-top: 45px;
+    margin-left: 20%;
+}
+
+.slds-carousel__panels{
+    display: flex;
+    justify-content: center;
+}

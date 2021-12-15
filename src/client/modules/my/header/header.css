@@ -1,0 +1,11 @@
+.slds-global-header__logo{
+    background-image: url(https://www.freepnglogos.com/uploads/twitch-logo-symbol-25.png);
+    width:25px;
+    height:25px;
+}
+
+.slds-global-header_container{
+    text-align: center;
+    background: white;
+    
+}
