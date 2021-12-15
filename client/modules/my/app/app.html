@@ -1,0 +1,14 @@
+<template>
+    <div class="twitch_head">
+        <div><my-header></my-header>
+        </div>
+        <div class="slds-grid slds-grid_horizontal"> 
+        <div class="follow_list slds-col slds-size_1-of-8"><my-followedchan></my-followedchan>
+        </div>
+        <div class="carasoul slds-col slds-size_7-of-8"> <div> <my-vidcarousel></my-vidcarousel></div></div>
+        </div>
+    </div>
+    <a href="" class="authorize_public" onclick={runCode2}>login</a>
+    <input type="text" class="searchbox" name="search_box" placeholder="Enter Channel or Category..." onchange={handleSearchChange}></input>
+    <button onclick={getSearchChannel}>Click me</button>
+</template>

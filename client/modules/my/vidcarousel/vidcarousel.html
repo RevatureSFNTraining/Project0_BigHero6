@@ -1,0 +1,53 @@
+<template>
+<div class="slds-carousel">
+        <div class="slds-carousel__stage">
+            
+            <div class="slds-carousel__panels" style="transform:translateX(-0%)" lwc:dom="manual"></div>
+            
+            <footer>
+
+                <template if:true={button_prev_disabled}>
+                    <button
+                        disabled
+                        label="Previous"
+                        variant="brand"
+                        icon-position="left"
+                        width=50
+                        
+                    ><img src="/SLDS/icons/utility/chevronleft_60.png" width="25" height="25"></button>
+                </template>
+                <template if:false={button_prev_disabled}>
+                    <button
+                        label="Previous"
+                        variant="brand"
+                        icon-position="left"
+                        
+                        onclick={previous}
+                    ><img src="/SLDS/icons/utility/chevronleft_60.png" width="25" height="25"></button>
+                </template>
+
+                <span class="count">{count}</span>
+
+                <template if:true={button_next_disabled}>
+                    <button
+                        disabled
+                        label="Next"
+                        variant="brand"
+                        icon-position="right"
+                       
+                    > <img src="/SLDS/icons/utility/chevronright_60.png" width="25" height="25"></button>
+                </template>
+                <template if:false={button_next_disabled}>
+                    <button
+                        label="Next"
+                        variant="brand"
+                        icon-position="right"
+                        onclick={next}
+                    ><img src="/SLDS/icons/utility/chevronright_60.png" width="25" height="25"></button>
+                </template>
+                
+            </footer>
+
+        </div>
+      </div>
+</template>
