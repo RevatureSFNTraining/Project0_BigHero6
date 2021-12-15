@@ -1,0 +1,11 @@
+.icon, .info, .box {
+    max-width: 22px;
+    height:auto;
+    display:flex;
+    justify-items: center;
+    align-items: center;
+    border-style: none;
+    background-color: #acdcee;
+    padding: 1%;
+    flex-direction: column;
+}
