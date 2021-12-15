@@ -12,6 +12,31 @@
     left: 22px;
 }
 
-div,span {
+div,
+span {
     border-radius: 6px;
+}
+
+.meta {
+    font-size: smaller;
+    position: relative;
+    left: 6px;
+    top:-2px;
+}
+
+.title {
+    font-size: x-large;
+    font-weight: bold;
+}
+
+.preview {
+    position: relative;
+    left: 6px;
+}
+.interact {
+    font-size: small;
+
+    position: relative;
+    left: 12px;
+    top: 4px;
 }

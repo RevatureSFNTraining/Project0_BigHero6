@@ -4,9 +4,18 @@
             <div><my-vote-box></my-vote-box></div>
         </div>
         <div class="stuff">
-            <div class="system">meta</div>
-            <div class="content">content</div>
-            <div class="interact">interact</div>
+            <div class="system">
+                <span class="meta"
+                    >Posted to {community} by {author} on {date}.</span
+                >
+            </div>
+            <div class="content">
+                <span class="title">{Title}</span>
+                <br /><span class="preview">{preview}</span>
+            </div>
+            <div class="interact">
+                {comment_count} Comments.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reward.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Share. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Save.
+            </div>
         </div>
     </div>
 </template>
