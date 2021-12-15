@@ -36,19 +36,7 @@
     width: auto;
 }
 
-.logo-W{
-    max-height: 100%;
-    align-items: center;
-}
 
-.logo-W img{
-    max-height: 80%;
-    max-width: auto;
-}
-
-.logo-W p{
-    font-size: 2em;
-}
 
 .header {
     height: 100%;
