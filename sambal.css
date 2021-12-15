@@ -1,0 +1,19 @@
+.title-box {
+    background-color:green;
+    height: 10vh;
+    font-size:2vw;
+     text-align: center; 
+    line-height: 9vh;
+    color: white;
+    /* display:flex;
+    justify-content:left;
+    */
+    }
+.radioBtns-box{
+    display:flex;
+    justify-content:center;
+}
+.search-box{
+    display:flex;
+    justify-content:center;
+}				
