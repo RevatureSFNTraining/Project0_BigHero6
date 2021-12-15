@@ -5,3 +5,6 @@ input{
     border:hidden;
     font-size: 1.5em;
 }
+input:hover{
+    color:white;
+}

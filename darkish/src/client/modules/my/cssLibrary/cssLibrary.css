@@ -4,6 +4,10 @@
     overflow: hidden;
 }
 
+.active{
+    color:white;
+}
+
 .bkg-black{
     background-color: #111111;
     height: 20rem;

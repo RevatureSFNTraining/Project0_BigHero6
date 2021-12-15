@@ -1,5 +1,14 @@
 <template>
     <div>
+        <my-head onchangedir={changeDir}></my-head>
+    </div>
+    <div if:true={showHome}>
         <my-home></my-home>
+    </div>
+    <div if:true={showAbout}>
+        <my-about></my-about>
+    </div>
+    <div if:true={showShop}>
+        <my-shop></my-shop>
     </div>
 </template>
