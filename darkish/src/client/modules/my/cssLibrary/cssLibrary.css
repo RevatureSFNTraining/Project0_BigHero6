@@ -1,7 +1,7 @@
 .container{
     font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
     font-size:1.5em;
-    overflow: hidden;
+    overflow: hidden; background-color: white;
 }
 
 .active{
@@ -24,6 +24,7 @@
 }
 
 .bkg-large{
+    margin-top:2rem;
     height: 20rem;
 }
 
@@ -47,6 +48,7 @@
 }
 
 .img-swap img{
+    
     padding-top:2%;
     max-height: 80%;
     width: auto;
