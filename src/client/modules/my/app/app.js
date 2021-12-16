@@ -5,19 +5,19 @@ const accesstoken = 'galdqw6axk2eu9us8hej10qudw0il5';
 const apptoken = '9kw33h5pdw0ik1y2scu7dro2memiki';
 const Url = 'https://id.twitch.tv/oauth2/authorize';
 
-
 export default class App extends LightningElement {
 
     x = document.defaultView.addEventListener("resize", this.resizeObjs);
     keyword = "";
     broadcast_id = "";
     custom_user_id = "";
+    y;
     resizeObjs(){
         console.log("window has been resized");
     }
 
 
-    runCode(){
+    lookupUser(){
         var XML = new XMLHttpRequest();
         XML.open("GET", "https://api.twitch.tv/helix/streams/?user_id=deathblok");
         XML.setRequestHeader('Client-ID', "tzv7536kq7b8kt55wbtmm9lvmcizwa");
@@ -26,7 +26,7 @@ export default class App extends LightningElement {
           console.log(XML.response);
         }
     }
-    runCode2(){
+    runAuth(){
         this.template.querySelector('.authorize_public').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + 'tzv7536kq7b8kt55wbtmm9lvmcizwa' + '&redirect_uri=' + encodeURIComponent('http://localhost') + '&response_type=token');
     }
 
@@ -47,6 +47,8 @@ export default class App extends LightningElement {
     xhr.send();
     xhr.onload = function () {
       console.log(xhr.response);
+      this.y = xhr.response;
+      console.log(this.y);
     }
   }
   
@@ -67,6 +69,7 @@ export default class App extends LightningElement {
       xhr.send();
       xhr.onload = function () {
         console.log(xhr.response);
+
       }
     }
 
