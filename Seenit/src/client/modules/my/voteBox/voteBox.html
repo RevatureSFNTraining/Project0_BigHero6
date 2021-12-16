@@ -1,13 +1,25 @@
 <template>
     <div class="box">
-        <div class="arrow" id="up">
-            <img class="icon" src="../../../resources/arrow-up-empty.png" />
+        <div class="arrow">
+            <button onclick={handleUpVote}>
+                <img
+                    class="icon"
+                    id="up"
+                    src="../../../resources/arrow-up-empty.png"
+                />
+            </button>
         </div>
         <div class="info" id="post_score">
-            <span>1000</span>
+            <span>{score}</span>
         </div>
-        <div class="arrow" id="down">
-            <img class="icon" src="../../../resources/arrow-down-empty.png" />
+        <div class="arrow">
+            <button onclick={handleDownVote}>
+                <img
+                    class="icon"
+                    id="down"
+                    src="../../../resources/arrow-down-empty.png"
+                />
+            </button>
         </div>
     </div>
 </template>
