@@ -1,34 +1,28 @@
 <template>
-    <div class="slds-grid slds-grid_align-space">
-      <div class="slds-col slds-size_1-of-10">
-        <span>1</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>2</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>3</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>4</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>5</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>6</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>7</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>8</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>9</span>
-      </div>
-      <div class="slds-col slds-size_1-of-10">
-        <span>10</span>
-      </div>
+  <div class="slds-grid slds-grid_align-spread"> 
+    <p class=cate_title style="font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif">Game Categories</p> 
+  <button onclick={getTopGames}>Reset</button>
+  </div>
+  <div class="slds-grid slds-grid_align-space game_lists">
+    <div class="slds-col slds-size_1-of-10 game_categories">
+      <div class="game_img"><img src="" class="img_pic" onclick={handleClick}></div>
+      <div class="game_title"><p class="game_text">Test</p></div>
     </div>
+    <div class="slds-col slds-size_1-of-10 game_categories">
+      <div class="game_img"><img src="" class="img_pic" onclick={handleClick2}></div>
+      <div class="game_title"><p class="game_text">Test</p></div>
+    </div>
+    <div class="slds-col slds-size_1-of-10 game_categories">
+      <div class="game_img"><img src="" class="img_pic" onclick={handleClick3}></div>
+      <div class="game_title"><p class="game_text">Test</p></div>
+    </div>
+    <div class="slds-col slds-size_1-of-10 game_categories">
+      <div class="game_img"><img src="" class="img_pic" onclick={handleClick4}></div>
+      <div class="game_title"><p class="game_text">Test</p></div>
+    </div>
+    <div class="slds-col slds-size_1-of-10 game_categories">
+      <div class="game_img"><img src="" class="img_pic" onclick={handleClick5}></div>
+      <div class="game_title"><p class="game_text">Test</p></div>
+    </div>
+  </div>
 </template>

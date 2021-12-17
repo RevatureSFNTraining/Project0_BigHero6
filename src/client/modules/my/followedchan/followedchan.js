@@ -20,28 +20,11 @@ export default class FollowedChan extends LightningElement {
     }
 
     async getUsers(){
-        //fetch(API_FETCH)
-       // .then(res => res.json())
-       // .then(data => console.log(data))
-       // .catch(error => {
-      //      console.error(`Error: ${error}`);
-       // });
-       
-   
-       // fetch example using async/await
+
         let fetchWeather = await fetch(API_FETCH);
         let parsedRes = await fetchWeather.json();
         this.numArray = parsedRes.length;
-        parsedRes.forEach(obj => {
-           Object.entries(obj).forEach(([key, value]) => {
-               console.log(`${key} ${value}`);
-           });
-           console.log('-------------------');
-       });
-
         this.users =  parsedRes;
-        console.log(this.numArray);
-        //this.dupeCard(this.numArray);
 
    }
    dupeCard(num) {

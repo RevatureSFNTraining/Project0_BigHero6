@@ -1,5 +1,4 @@
 import { LightningElement } from 'lwc';
-
 const user_id = '43556934';
 const accesstoken = 'galdqw6axk2eu9us8hej10qudw0il5';
 const apptoken = '9kw33h5pdw0ik1y2scu7dro2memiki';
@@ -16,7 +15,6 @@ export default class App extends LightningElement {
         console.log("window has been resized");
     }
 
-
     lookupUser(){
         var XML = new XMLHttpRequest();
         XML.open("GET", "https://api.twitch.tv/helix/streams/?user_id=deathblok");
@@ -29,28 +27,6 @@ export default class App extends LightningElement {
     runAuth(){
         this.template.querySelector('.authorize_public').setAttribute('href', 'https://id.twitch.tv/oauth2/authorize?client_id=' + 'tzv7536kq7b8kt55wbtmm9lvmcizwa' + '&redirect_uri=' + encodeURIComponent('http://localhost') + '&response_type=token');
     }
-
-  // gets the 10 top game categories
-  getTopGames(){
-    var xhr = new XMLHttpRequest();
-    xhr.open('GET', 'https://api.twitch.tv/helix/games/top?first=10');
-    xhr.setRequestHeader('Authorization',  "Bearer " + accesstoken);
-    xhr.setRequestHeader('Client-Id', 'tzv7536kq7b8kt55wbtmm9lvmcizwa');    
-    xhr.onload = function(data){
-      console.log(data);
-    };
-      
-    xhr.onerror = function(error){
-      console.log(error.target.status);
-    };
-      
-    xhr.send();
-    xhr.onload = function () {
-      console.log(xhr.response);
-      this.y = xhr.response;
-      console.log(this.y);
-    }
-  }
   
     // gets channel that are live
     getSearchChannel(){
@@ -137,9 +113,6 @@ export default class App extends LightningElement {
       this.keyword = event.target.value;
     }
 
-    renderedCallback(){
-      this.getTopGames();
-    }
     
 }
 

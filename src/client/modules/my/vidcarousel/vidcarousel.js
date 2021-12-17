@@ -6,13 +6,16 @@ export default class CarouselImages extends LightningElement {
     @api height = 'auto'
     @api files = [
         {
-            title: 'Playing Puppy',
-            url: 'https://player.twitch.tv/?channel=xqcow&parent=localhost&autoplay=false',
+            title: 'Streamer1',
+            url: 'https://player.twitch.tv/?channel=disguisedtoast&parent=localhost&autoplay=false&muted=true',
+            url2 :'https://www.twitch.tv/embed/disguisedtoast/chat?parent=localhost'
         },
         {
-            title: 'Tired Puppy',
-            url: 'https://player.twitch.tv/?channel=koii&parent=localhost&autoplay=false',
+            title: 'Streamer2',
+            url: 'https://player.twitch.tv/?channel=Xqcow&parent=localhost&autoplay=false&muted=true',
+            url2 :'https://www.twitch.tv/embed/Xqcow/chat?parent=localhost'
         },
+
     ]
 
     active = 0
@@ -56,24 +59,27 @@ export default class CarouselImages extends LightningElement {
 
     switchPanels(){
 
+        let index = 0;
         this.panels.forEach(el => {
         
             if(el.classList.contains(`panel_${this.active}`)){
-                el.classList.add('active')
-                el.classList.remove('hidden')
-                for (let i = 0; i <el.children.length; i++){
-                    if (el.children[i].tagName ==='iframe'){
-                        el.children[i].setAttribute("height",0);
-                        el.children[i].setAttribute("width",0);
-                        el.children[i].setAttribute("frameborder",0);   
-                    }
-                }
-                
+                el.classList.add('active');
+                el.classList.remove('hidden');
+                console.log(el.querySelector('iframe'));
+                el.querySelector('iframe').setAttribute("src",this.files[index]['url']);
+                el.querySelector('iframe').setAttribute("height",500);
+                el.querySelector('iframe').setAttribute("width",700);
+                el.querySelector('iframe').setAttribute("frameborder",0);          
             }
             else {
-                el.classList.remove('active')
-                el.classList.add('hidden')
+                el.classList.remove('active');
+                el.classList.add('hidden');
+                el.querySelector('iframe').setAttribute("src","");
+                el.querySelector('iframe').setAttribute("height",0);
+                el.querySelector('iframe').setAttribute("width",0);
+                el.querySelector('iframe').setAttribute("frameborder",0);    
             }
+            index += 1;
         })
     }
     
@@ -123,17 +129,23 @@ export default class CarouselImages extends LightningElement {
                 this.deactivate(div)
             }
             
-            const iframe = document.createElement('iframe')
+            let iframe = document.createElement('iframe')
             iframe.src = file.url
             iframe.frameBorder = "0";
             iframe.allowFullscreen="true";
             iframe.scrolling="no";
-            iframe.height="300";
-            iframe.width="600";
-           // if(this.width){ img.style.width = this.width }
-           // if(this.height){ img.style.height = this.height }
+            iframe.height="500";
+            iframe.width="700";
+            iframe.classList.add("video_player");
             div.appendChild( iframe )
 
+
+            iframe = document.createElement('iframe')
+            iframe.src = file.url2
+            iframe.height="500";
+            iframe.width="200";
+            iframe.classList.add("video_chat");
+            div.appendChild( iframe )
             this.container.appendChild( div )
         })
 
