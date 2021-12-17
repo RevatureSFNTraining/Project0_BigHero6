@@ -11,6 +11,7 @@ export default class FollowedChan extends LightningElement {
 
     renderedCallback(){
         if (this.hasRendered){
+            
         }
         else{
             this.hasRendered = true;

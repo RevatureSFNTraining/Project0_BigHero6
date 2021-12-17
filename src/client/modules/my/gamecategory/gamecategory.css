@@ -6,6 +6,7 @@
     font-size:6px;
     margin:auto;
     text-align: center;
+    font-weight: bolder;
 }
 .game_categories{
     margin: 5px;
@@ -30,4 +31,8 @@
 
 .no-events{
     pointer-events:none;
+ }
+
+ .resetbtn{
+     background-color: purple;
  }

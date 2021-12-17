@@ -67,7 +67,7 @@ export default class CarouselImages extends LightningElement {
                 el.classList.remove('hidden');
                 console.log(el.querySelector('iframe'));
                 el.querySelector('iframe').setAttribute("src",this.files[index]['url']);
-                el.querySelector('iframe').setAttribute("height",500);
+                el.querySelector('iframe').setAttribute("height",300);
                 el.querySelector('iframe').setAttribute("width",700);
                 el.querySelector('iframe').setAttribute("frameborder",0);          
             }
@@ -134,7 +134,7 @@ export default class CarouselImages extends LightningElement {
             iframe.frameBorder = "0";
             iframe.allowFullscreen="true";
             iframe.scrolling="no";
-            iframe.height="500";
+            iframe.height="300";
             iframe.width="700";
             iframe.classList.add("video_player");
             div.appendChild( iframe )
@@ -142,7 +142,7 @@ export default class CarouselImages extends LightningElement {
 
             iframe = document.createElement('iframe')
             iframe.src = file.url2
-            iframe.height="500";
+            iframe.height="300";
             iframe.width="200";
             iframe.classList.add("video_chat");
             div.appendChild( iframe )

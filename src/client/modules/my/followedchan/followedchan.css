@@ -5,9 +5,8 @@
     margin-top:2px;
 }
 .slds-m-around_medium{
-    margin-top:45px;
     margin-left:auto;
-    margin-right: auto;
+    margin-right:auto;
 }
 
 .game_title{
@@ -29,14 +28,15 @@
 
 .follow_list{
     font-size:10px;
+    text-align: center;
     margin-bottom: 0;
-    margin-top:0;
+    margin-top:50px;
+    background-color: rgb(41, 33, 33);
+    color: white;
 }
 .follow_card{
     margin-top:-10px;
-
 }
 
-.slds-card{
-    margin-top:0;
-}
+
+

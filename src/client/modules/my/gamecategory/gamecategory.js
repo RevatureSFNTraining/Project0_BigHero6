@@ -7,6 +7,7 @@ const Url = 'https://id.twitch.tv/oauth2/authorize';
 export default class App extends LightningElement {
     keyword;
     x;
+
   // gets the 10 top game categories
   getTopGames(){
     var xhr = new XMLHttpRequest();
@@ -37,7 +38,7 @@ export default class App extends LightningElement {
           let game_art_url = this.x['box_art_url'];
           let result = this.x['box_art_url'].indexOf('{');
           let box_url_str = game_art_url.slice(0,result);
-          let size_str = '80x125.jpg';
+          let size_str = '125x125.jpg';
           game_art_url = box_url_str + size_str;
           game_image_element.setAttribute("src", game_art_url);
           game_image_element.classList.remove("no-events");
