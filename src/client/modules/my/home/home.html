@@ -1,0 +1,85 @@
+<template>
+    <body>
+        <div class="wrapper">
+     
+            <div class="header">
+          
+            <h1>Universal Computers Inc</h1>
+        
+            </div>
+  
+            <div class="nav">
+      
+                <ul>
+                    <li><a href="home.html">Home</a></li>
+                    <li><a href="news.html">News</a></li>
+                    <li><a href="reviews.html">Reviews</a></li>
+                    <li><a href="media.html">Media</a></li>
+                    <li><a href="aboutUs.html">About Us</a></li>
+                </ul>
+            </div>
+  
+
+            <div class="aside">
+           
+                <h2>Latest News on technology</h2>
+                    <p class="info">Computer Technology is constantly improving and adapting the to needs of society and creative ideas of technology visionaries, developers, and computer scientists. Here you can information and links all the news on lastest technologies.</p>
+               
+                    <ul>
+                        <li><a href="https://www.microsoft.com">Microsoft</a></li>
+                        <li><a href="https://www.apple.com">Apple</a></li>
+                        <li><a href="https://www.intel.com">Intel</a></li>
+                        <li><a href="https://www.computerworld.com">ComputerWorld</a></li>
+                        <li><a href="https://www.pcmag.com/news">PC Mag</a></li>
+                    </ul>
+            </div>  
+  
+            <div class="home">
+  
+                <h2>Introduction</h2>
+   
+                   <p>
+                       Welcome to Universal Computers Inc. Here at UCI, we address your computer needs. We repair PC's, laptops, and tablets. UCI sells complete products and parts. UCI consists of qualified sales associates and technicians.
+                   </p>
+                   <br></br>
+                   <p>
+                       UCI offers information on the latest information on the computer products. You can see which parts we have available to purchase from PC processers to phone cases.
+                   </p>
+               
+                   </br><br>
+                        
+                   <p>Here you can view the price of diffent types of PC's.</p>
+                    <input type="checkbox" label="Show contents" onclick={handleClick}>
+                   <div class="PC">
+                        <ul>
+                            <template if:true={IsSeen} for:each={contents} for:item="content">
+                            
+                                <li key={content.Number}>{content.Name},{content.Price}</li>
+                        
+                            </template>
+                        </ul>
+                        
+                        <template if:false={IsSeen}>
+                            not showing details.
+                        </template>
+                   </div>
+
+                   <div>
+                       <image src="resources/media/surface_laptop_4.jpg"></image>
+                       <P>The is a picure of the Microsoft Surface Laptop 4.</P>
+                   </div>
+            </div>
+ 
+            <div class="footer">
+                <p>Infomation credited from websites and the other links on the homepage.</p>
+                
+              
+                Copyright &copy; 2021 Lee Washington Revature Project_0
+  
+            </div>
+  
+        </div>
+  
+    </body>
+
+</template>
