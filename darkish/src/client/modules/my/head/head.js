@@ -16,14 +16,14 @@ export default class App extends LightningElement {
 
                 this.directory = 'home';
                 break;
-            case 'About':
+            case 'Vendors':
                 this.homeActive='';
                 this.aboutActive='active';
                 this.shopActive='';
 
                 this.directory = 'about';
                 break;
-            case 'Shop':
+            case 'Polls':
                 this.homeActive='';
                 this.aboutActive='';
                 this.shopActive='active';
