@@ -1,10 +1,19 @@
 <template>
     <div class="content">
-        <span class="post"><my-post></my-post></span>
-
-        <span >
+        <!-- <span >
             <input type="button" onclick={buildPosts} value="Make Data">
-        </span> 
+        </span>  -->
+        <!--    @api community = 'Vanquish';
+    @api author = 'Trevor';
+    @api publishDateTime = new Date();
+    @api title = '100 ways to get rich off Salesforce';
+    @api preview = `1. work with Revature
+    2. cure cancer
+    3. ????
+    4. Profit`;-->
+    <template for:each={posts} for:item="p">
+        <span key={p.key} class="post"><my-post author={p.author} title={p.title} preview={p.preview} publish-date-time={p.publishDateTime}></my-post></span>
+    </template>
          
     </div>
 </template>

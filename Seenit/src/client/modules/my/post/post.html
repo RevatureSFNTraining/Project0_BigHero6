@@ -1,20 +1,22 @@
 <template>
     <div class="thepost">
         <div class="votebox">
-            <div><my-vote-box></my-vote-box></div>
+            <div><my-vote-box score=1005></my-vote-box></div>
         </div>
         <div class="stuff">
             <div class="system">
                 <span class="meta"
-                    >Posted to {community} by {author} on {date}.</span
+                    >Posted to {community} by {author} on {publishDateTime}.</span
                 >
             </div>
             <div class="content">
-                <span class="title">{Title}</span>
+                <span class="title">{title}</span>
                 <br /><span class="preview">{preview}</span>
             </div>
             <div class="interact">
-                {comment_count} Comments.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reward.  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  Share. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Save.
+                {comment_count} Comments. &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Reward.
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Share.
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; Save.
             </div>
         </div>
     </div>

@@ -36,7 +36,7 @@ export default class ContentFeed extends LightningElement {
                 let c = rs;
                 rs = ls;
                 ls = c;
-            } else while (ls == rs) {
+            } else while (ls === rs) {
                 ls = i + Math.round((Math.random()*ls))
             }
             // console.log('ls = ' + ls.toString());
@@ -45,7 +45,7 @@ export default class ContentFeed extends LightningElement {
             this.posts.push({
                 key: j+i,
                 score: Math.round(Math.random()*10000),
-                author: 'trevor',
+                author: 'trevor ' + j + ' ' + i,
                 publishDateTime: this.randomDate(ls, rs, ls, rs),
                 title: 'title ' + i.toString(),
                 preview: this.lorem.slice(ls, rs)

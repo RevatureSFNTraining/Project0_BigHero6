@@ -1,23 +1,30 @@
 import { LightningElement, api } from 'lwc';
 export default class VoteBox extends LightningElement {
     base_score = 1000;
-    @api score = this.base_score;
+    @api score;
     user_score = 0;
+    final_score = this.score;
     upvoted = false;
     downvoted = false;
+
     upVote() {
+        
+        this.base_score = this.score - this.user_score;
+
         this.downvoted = false;
         this.upvoted = true;
         this.user_score = 1;
         this.score = this.base_score + this.user_score;
     }
     downVote () {
+        this.base_score = this.score - this.user_score;
         this.downvoted = true;
         this.upvoted = false;
         this.user_score = -1;
         this.score = this.base_score + this.user_score;
     }
     resetVote () {
+        this.base_score = this.score - this.user_score;
         this.downvoted = false;
         this.upvoted = false;
         this.user_score = 0;
