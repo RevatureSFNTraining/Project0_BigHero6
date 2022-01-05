@@ -4,6 +4,23 @@
     overflow: hidden; background-color: white;
 }
 
+.webForm{
+    background-color: #111111;
+    height: 86.5vh;
+}
+.webForm form{
+    background-color: white;
+    color: #111111;
+    border: solid 2px black;
+    padding: 2rem;
+    border-radius: 20px;
+}
+
+.webForm input, option{
+    color:#111111;
+}
+
+
 .active{
     color:white;
 }
@@ -71,8 +88,9 @@
 .buy-btn{
     background-color: #498882;
     border-color: #498882;
-    font-size: 4em;
-    height:1.2em;
+    font-size: 3em;
+    padding: .5em .25em;
+    color:#111111;
 }
 
 .about{
